@@ -41,4 +41,13 @@ public class UserServiceImpl implements UserService{
             }
 
         }
+
+    @Override
+    public boolean login(User user) {
+       User user2 = dao.login(user);
+        if(user2 == null){
+            return true;
+        }
+        return false;
+    }
 }

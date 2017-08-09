@@ -8,4 +8,6 @@ import com.qzp.app.entity.User;
 public interface UserService {
     void addUser(User user);
     boolean findUser(String loginname);
+
+    boolean login(User user);
 }

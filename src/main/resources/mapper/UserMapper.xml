@@ -22,4 +22,8 @@
         insert into t_user values (#{uid},#{loginname},#{loginpass},#{email},#{status},#{activationCode})
     </insert>
 
+    <select id="login" resultMap="userMap">
+        select * from t_user where loginname = #{user.loginname} and loginpass = #{user.loginpass}
+    </select>
+
 </mapper>
